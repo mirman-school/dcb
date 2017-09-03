@@ -1,0 +1,14 @@
+{
+  "name": "1-hello",
+  "version": "1.0.0",
+  "description": "## JavaScript We're using the JavaScript programming language in this course. JavaScript's natural habitat is in the web browser. It's the code that runs all the interactions on all the websites you visit.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jest": "^20.0.4"
+  }
+}
