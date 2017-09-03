@@ -1,4 +1,4 @@
-# Hello, JS!
+#1: Hello, JS!
 
 ## JavaScript
 We're using the JavaScript programming language in this course. JavaScript's natural habitat is in the web browser. It's the code that runs all the interactions on all the websites you visit.
