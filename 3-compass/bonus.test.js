@@ -35,7 +35,7 @@ test("South-Southeast", () => {
 });
 
 test("South-Southwest", () => {
-  expect(compass(202.5)).toBe("SSE");
+  expect(compass(202.5)).toBe("SSW");
 });
 
 test("West-Southwest", () => {
