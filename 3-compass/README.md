@@ -3,44 +3,29 @@ Have you seen a compass? That's what we're doing here.
 
 Nautical vessels use compass headings to navigate. Sometimes we use degrees and sometimes we use cardinal/intercardinal directions. We're going to write a simple function that converts a given compass heading to a named direction.
 
-## What do you do with a lotta conditions?
-In our last exercise, we learned about basic conditional statements. Here, we're going to have so many conditions that a regular `if`/`else` tree would get a little unwieldy. Luckily, we have another tool for just such an occasion: the `switch`.
+## Code Analysis
+`compass()` will take a numerical heading and convert it into the appropriate compass point. We're going to use the 16-wind compass, meaning we divide the compass circle into 16 sections.
 
-### Switch it up
-When we have a lot of known possible values for something, the `switch` statement allows us to create a series of `case`s. 
+This looks like another good use for **conditional statements**, and it is. Except in this case, we need to structure our conditions in just such a way so that we only hit the correct test. We also have to compare the `heading` to a series of potential degree values to see if it falls inside that range. 
 
-The [Mozilla Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch) give a good overview, but here's the brief version:
+For example, if `heading` is less than 16.88 (I know, weird), then I know I'm going to call this North. In JS:
 
 ```
-switch (expression) {
-  case value1:
-    //Statements executed when the result of expression matches value1
-    return result1;
-    [break;]
-  case value2:
-    //Statements executed when the result of expression matches value2
-    return result2;
-    [break;]
-  ...
-  case valueN:
-    //Statements executed when the result of expression matches valueN
-    return resultN;
-    [break;]
-  [default:
-    //Statements executed when none of the values match the value of the expression
-    return defaultResult;
-    [break;]]
+if (heading < 16.88) {
+  return "North";
 }
 ```
-So we write a `case` for each value we know is a possibility. That `default` you see is to handle any unforeseen values. 
 
-### Why not use `if`/`else`?
-Well you can, but as you'll see below, that might be messy.
+Putting that test first means I don't attempt any tests below it. If the test passes, I `return` the right value.
+
+`return` stops the show. Once our function hits a `return` the function execution ends. So we don't need to worry about any code below it if we layer the conditions correctly. In fact, because of this feature of `return`, we don't even need to use `else if` or `else`! In this case, we just need the right order of `if`s, and one final `return` to handle a `heading` that doesn't pass _any_ test.
 
 ## Objectives
-
 ### Primary Objective
 Complete the `compass()` function to convert the correct 4 headings to North, East, South, and West, respectively.
 
 ### Bonus Objectives
 You'll notice in the tests, that we account for _all_ the named directions on the compass. Expand your `case`s to account for all them!
+
+## Hints
+* [Points of the Compass](https://en.wikipedia.org/wiki/Points_of_the_compass#32_cardinal_points)
