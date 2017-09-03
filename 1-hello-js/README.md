@@ -62,6 +62,9 @@ So let's look at this specific function. Inside the parentheses after `greet`, w
 
 The `return name` line indicates we're just spitting that value right back out without doing anything to it. And our tests are failing. We need to figure out how to modify the output of this function to match what our tests are expecting.
 
+### Strings
+It's worth mentioning that, when we work with pieces of text in programming (like `"Hello, JS!"`), they are called `string`s. It's important to distinguish working with `string`s from working with `number`s. They are different **data types**, and have different properties/abilities.
+
 ### This seems like a lot.
 This framework is going to allow us to do a lot of complex work without too much effort. It seems like a lot when we get started, but getting used to this workflow is going to be worth it in the long run.
 
