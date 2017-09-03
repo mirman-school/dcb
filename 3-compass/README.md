@@ -29,3 +29,9 @@ You'll notice in the tests, that we account for _all_ the named directions on th
 
 ## Hints
 * [Points of the Compass](https://en.wikipedia.org/wiki/Points_of_the_compass#32_cardinal_points)
+* Your North test is going to look weird. Consider that:
+  * North is any value from 0 - 16.88
+  * North is any value from 343.13 to 359.99
+  * We'll need to use Boolean operators to combine our tests
+    * [AND](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_Operators#Logical_AND)
+    * [OR](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_Operators#Logical_OR)
