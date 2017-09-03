@@ -15,16 +15,20 @@ The [Mozilla Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Refer
 switch (expression) {
   case value1:
     //Statements executed when the result of expression matches value1
+    return result1;
     [break;]
   case value2:
     //Statements executed when the result of expression matches value2
+    return result2;
     [break;]
   ...
   case valueN:
     //Statements executed when the result of expression matches valueN
+    return resultN;
     [break;]
   [default:
     //Statements executed when none of the values match the value of the expression
+    return defaultResult;
     [break;]]
 }
 ```
