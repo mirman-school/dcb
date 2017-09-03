@@ -58,14 +58,21 @@ In math, functions define custom operations. That's true in programming too. We 
 
 Inside the function, you see a `return` line. This spits the result of the function back out. Our tests call the function and evaluate the returned result.
 
+So let's look at this specific function. Inside the parentheses after `greet`, we see the word `name`. This tells us that our function takes a single **argument** that we'll call name inside of the function.
+
+The `return name` line indicates we're just spitting that value right back out without doing anything to it. And our tests are failing. We need to figure out how to modify the output of this function to match what our tests are expecting.
+
 ### This seems like a lot.
 This framework is going to allow us to do a lot of complex work without too much effort. It seems like a lot when we get started, but getting used to this workflow is going to be worth it in the long run.
 
 ## Handing in work
-Once you've gotten everything working, it's time to commit your code. When working with Git, it's not enough to just save the file. You have to tell Git about your changes. Luckily, VSCode makes that super easy. We'll cover this in class, but remember this procedure:
+Once you've gotten everything working, it's time to **commit** your code. When working with Git, it's not enough to just save the file. You have to tell Git about your changes. Luckily, VSCode makes that super easy. We'll cover this in class, but remember this procedure:
 
 1. Add
 2. Commit
 3. Push
 
-Every time. If you don't push your code, we assume it's not done.
+Every time. If you don't **push** your code, we assume it's not done.
+
+## Hints
+* [Using addition (`+`) on strings](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Addition)
