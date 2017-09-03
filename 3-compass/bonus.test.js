@@ -19,33 +19,33 @@ test("Northwest", () => {
 
 // Even more divisions
 test("North-Northeast", () => {
-  expect(compass(30)).toBe("NNE");
+  expect(compass(22.5)).toBe("NNE");
 });
 
 test("East-Northeast", () => {
-  expect(compass(75)).toBe("ENE");
+  expect(compass(67.5)).toBe("ENE");
 });
 
 test("East-Southeast", () => {
-  expect(compass(115)).toBe("ESE");
+  expect(compass(112.5)).toBe("ESE");
 });
 
 test("South-Southeast", () => {
-  expect(compass(160)).toBe("SSE");
+  expect(compass(157.5)).toBe("SSE");
 });
 
 test("South-Southwest", () => {
-  expect(compass(205)).toBe("SSE");
+  expect(compass(202.5)).toBe("SSE");
 });
 
 test("West-Southwest", () => {
-  expect(compass(250)).toBe("WSW");
+  expect(compass(247.5)).toBe("WSW");
 });
 
 test("West-Northwest", () => {
-  expect(compass(295)).toBe("WNW");
+  expect(compass(292.5)).toBe("WNW");
 });
 
 test("North-Northwest", () => {
-  expect(compass(340)).toBe("NNW");
+  expect(compass(337.5)).toBe("NNW");
 });
