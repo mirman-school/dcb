@@ -46,6 +46,18 @@ Expected value to be (using ===):
 
 Read that carefully.
 
+### Functions
+You'll notice that the first line of `index.js` reads:
+
+``` 
+function greet(name) {
+```
+We're going to write all our code inside of functions. It's good practice, but it might look weird to start. Let's take it one piece at a time.
+
+In math, functions define custom operations. That's true in programming too. We define functions and then invoke, or **call** them when we need them.
+
+Inside the function, you see a `return` line. This spits the result of the function back out. Our tests call the function and evaluate the returned result.
+
 ### This seems like a lot.
 This framework is going to allow us to do a lot of complex work without too much effort. It seems like a lot when we get started, but getting used to this workflow is going to be worth it in the long run.
 
