@@ -1,14 +1,16 @@
-var sub;
-var seaFloor;
-var subImg;
-var foreBallast = 2;
-var aftBallast = 2;
-var maxBallast = 6;
-var minBallast = 0;
-var neutral = 4;
-var subRotationSpeed = .1;
-var ceiling;
-var floor;
+// You don't need to edit this code! Keep going until you see a comment
+// indicating you should change code.
+
+var sub; // The sub Sprite
+var subImg; // The image for the sub
+var foreBallast = 2; // Starting ballast in the front of the sub
+var aftBallast = 2; // Starting ballast in the back of the sub
+var maxBallast = 6; // The max ballast for each tank
+var minBallast = 0; // The min ballast
+var neutral = 4; // The ballast value that makes the sub neutrally buoyant
+var subRotationSpeed = .1; // Used to spin the sub when ballasts are uneven
+var ceiling; // The y coordinate for the top of the water
+var floor; // The y coordinate for the sea floor
 
 function preload() {
     subImg = loadImage("assets/img/sub-sprite.png");
@@ -47,51 +49,46 @@ function draw() {
 
     sub.setVelocity(0);
 
-
+    // Moves the sub up or down depending on buoyancy. DON'T TOUCH
     if (sub.position.y > ceiling && sub.position.y < floor - 80) {
         sub.setVelocity(0, Math.abs((foreBallast + aftBallast)) - neutral);
     } else {
         sub.setVelocity(0,0);
     }
 
-    // The code you need to implement
+    // ===
+    // THIS IS THE CODE YOU NEED TO IMPLEMENT
+    // ===
+
     if (foreBallast > aftBallast && sub.rotation <= 10) {
         // Set sub's rotationSpeed to subRotationSpeed
-        sub.rotationSpeed = subRotationSpeed;
+        
     } else if (foreBallast < aftBallast && sub.rotation >= -10) {
         // Set sub's rotationSpeed to the negative value of subRotationSpeed
-        sub.rotationSpeed = subRotationSpeed * -1;
+        
     } else {
         // If the ballast is even, stop rotation
-        sub.rotationSpeed = 0;
+        
     }
 
     if (keyWentDown("f")) {
         // Add fore ballast, but only when there's room left in the tank
-        if (foreBallast < maxBallast ) {
-            foreBallast++;
-        }
+        
     }
 
     if (keyWentDown("r")) {
         // Dump fore ballast, but only when it isn't empty
-        if (foreBallast > minBallast) {
-            foreBallast--;
-        }
+        
     }
 
     if (keyWentDown("a")) {
         // Add aft ballast, but only when there's room left in the tank
-        if (aftBallast < maxBallast) {
-            aftBallast++;
-        }
+        
     }
 
     if (keyWentDown("q")) {
         // Dump aft ballast, but only when it isn't empty
-        if (aftBallast > minBallast) {
-            aftBallast--;
-        }
+        
     }
 
     if (keyWentDown("space")) {
