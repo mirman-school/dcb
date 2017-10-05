@@ -10,7 +10,7 @@ This looks like another good use for **conditional statements**, and it is. Exce
 
 For example, if `heading` is less than 16.88 (I know, weird), then I know I'm going to call this North. In JS:
 
-```
+```javascript
 if (heading < 16.88) {
   return "North";
 }
